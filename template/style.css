@@ -1,8 +1,18 @@
+/* =====================================================================
+   GIT GUD — Bounty Poster styles
+   ---------------------------------------------------------------------
+   You can tweak ANY value in here to make the poster your own:
+     • colors        -> change the hex codes (e.g. #3b2317)
+     • fonts         -> change the font-family
+     • sizes/spacing -> the cqi numbers (1cqi = 1% of the poster width)
+   Don't worry about breaking it — that's what version control is for. :)
+   ===================================================================== */
+
 /* --- Global Layout (Single Page View) --- */
 body {
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a;
+    background-color: #1a1a1a; /* the dark frame around your poster */
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -17,7 +27,7 @@ body {
 #poster-wrapper {
     height: 80vh;
     aspect-ratio: 3 / 4;
-    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     container-type: inline-size;
 }
 
@@ -26,11 +36,11 @@ body {
     width: 100%;
     height: 100%;
 
-    background-image: url('paper.png');
+    background-image: url("paper.jpg"); /* the aged-paper texture */
     background-size: cover;
     background-position: center;
 
-    color: #3b2317;
+    color: #3b2317; /* main ink color */
     font-family: "Georgia", "Times New Roman", serif;
     text-transform: uppercase;
     text-align: center;
@@ -44,7 +54,7 @@ body {
 
 /* --- Sections --- */
 
-/* Header */
+/* Header (the big WANTED / GOATED word) */
 .header-section {
     margin-top: 1.9cqi;
     width: 100%;
@@ -71,7 +81,7 @@ body {
     max-height: calc(80vh / 3);
     border: 1.1cqi solid #3b2317;
     box-sizing: border-box;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     overflow: hidden;
 }
 .image-border img {
@@ -99,7 +109,8 @@ body {
     white-space: nowrap;
     text-align: center;
 }
-.decoration-left, .decoration-right {
+.decoration-left,
+.decoration-right {
     font-size: 8.8cqi;
     font-weight: 300;
     line-height: 0;
@@ -121,7 +132,7 @@ body {
     letter-spacing: -0.2cqi;
 }
 
-/* Footer */
+/* Footer (bounty amount + SUTD logo) */
 .footer-section {
     margin-top: auto;
     margin-bottom: 2.8cqi;
