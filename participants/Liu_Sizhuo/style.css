@@ -1,0 +1,183 @@
+/* =====================================================================
+   GIT GUD — Bounty Poster styles
+   ---------------------------------------------------------------------
+   You can tweak ANY value in here to make the poster your own:
+     • colors        -> change the hex codes (e.g. #3b2317)
+     • fonts         -> change the font-family
+     • sizes/spacing -> the cqi numbers (1cqi = 1% of the poster width)
+   Don't worry about breaking it — that's what version control is for. :)
+   ===================================================================== */
+
+/* --- Global Layout (Single Page View) --- */
+body {
+    margin: 0;
+    padding: 0;
+    background:
+        radial-gradient(circle at top, rgba(0, 255, 255, 0.15), transparent 35%),
+        radial-gradient(circle at bottom, rgba(255, 0, 153, 0.12), transparent 40%),
+        #090b14;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- The Viewport Wrapper --- */
+/* Defines the rendered size; cqi units inside resolve against this width */
+#poster-wrapper {
+    height: 80vh;
+    aspect-ratio: 3 / 4;
+    box-shadow: 0 0 35px rgba(0, 255, 255, 0.5), 0 0 60px rgba(255, 0, 153, 0.25);
+    container-type: inline-size;
+    border: 2px solid rgba(0, 255, 255, 0.7);
+}
+
+/* --- The Poster --- */
+.bounty-poster {
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(rgba(9, 12, 25, 0.78), rgba(20, 24, 46, 0.82)),
+        url("paper.jpg") center/cover no-repeat;
+
+    color: #d9f4ff;
+    font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+
+    padding: 4.2cqi;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid rgba(0, 255, 255, 0.7);
+    box-shadow: inset 0 0 30px rgba(0, 255, 255, 0.12);
+}
+
+/* --- Sections --- */
+
+/* Header (the big WANTED / GOATED word) */
+.header-section {
+    margin-top: 1.9cqi;
+    width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.header-text {
+    font-size: 17cqi;
+    font-weight: 900;
+    letter-spacing: 0.9cqi;
+    transform: scaleY(0.9);
+    line-height: 1;
+    white-space: nowrap;
+    color: #00f5ff;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.9), 0 0 24px rgba(255, 0, 153, 0.7);
+}
+
+/* Image */
+.image-section {
+    margin-top: 3.2cqi;
+    width: 100%;
+    flex-shrink: 0;
+}
+.image-border {
+    width: 100%;
+    max-height: calc(80vh / 3);
+    border: 1.1cqi solid #00f5ff;
+    box-sizing: border-box;
+    background: rgba(12, 22, 36, 0.7);
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4), inset 0 0 18px rgba(0, 255, 255, 0.15);
+}
+.image-border img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Banner */
+.banner-section {
+    margin-top: 3.7cqi;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.banner-text {
+    font-size: 6.7cqi;
+    font-weight: bold;
+    letter-spacing: 0.5cqi;
+    flex-grow: 1;
+    margin: 0 1.9cqi;
+    white-space: nowrap;
+    text-align: center;
+    color: #ff4fd8;
+    text-shadow: 0 0 12px rgba(255, 79, 216, 0.9);
+}
+.decoration-left,
+.decoration-right {
+    font-size: 8.8cqi;
+    font-weight: 300;
+    line-height: 0;
+    padding-bottom: 1.9cqi;
+    flex-shrink: 0;
+    color: #00f5ff;
+    text-shadow: 0 0 12px rgba(0, 245, 255, 0.9);
+}
+
+/* Name */
+.name-section {
+    margin-top: 1.4cqi;
+    width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.name-text {
+    font-size: 11cqi;
+    font-weight: 800;
+    transform: scaleX(0.85);
+    letter-spacing: -0.2cqi;
+    color: #f7fbff;
+    text-shadow: 0 0 12px rgba(0, 255, 255, 0.7), 0 0 20px rgba(255, 0, 153, 0.5);
+}
+
+/* Footer (bounty amount + SUTD logo) */
+.footer-section {
+    margin-top: auto;
+    margin-bottom: 2.8cqi;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+.bounty-row {
+    font-size: 7.9cqi;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    color: #ffe66d;
+    text-shadow: 0 0 12px rgba(255, 230, 109, 0.8);
+}
+.currency-symbol {
+    font-family: serif;
+    margin-right: 1.9cqi;
+    font-weight: normal;
+    color: #ff8a00;
+}
+.sutd-logo {
+    height: 6cqi;
+    margin-top: 1.4cqi;
+    align-self: flex-end;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.6));
+}
